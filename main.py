@@ -3,6 +3,8 @@
 # 2º Attribute the users a number for the board where 1 == X and 2 == O -
 # 3º Create the board 3 x 3 and set it to 0 -
 # 4º Print the board -
+# 5º Verify if player 1 or 2 wins vertically -
+# 6º Verify if player 1 or 2 wins horizontally 
 import random
 
 
@@ -63,10 +65,30 @@ def print_board(board):
         print("")
 
 
+def vertical_win(board):
+    # These function will check all the positions of the array vertically
+    # If it does it will return the number that won vertically
+    if board[0][0] == 1 and board[0][1] == 1 and board[0][2] == 1:
+        return 1
+    elif board[0][0] == 2 and board[0][1] == 2 and board[0][2] == 2:
+        return 2
+    elif board[1][0] == 1 and board[1][1] == 1 and board[1][2] == 1:
+        return 1
+    elif board[1][0] == 2 and board[1][1] == 2 and board[1][2] == 2:
+        return 2
+    elif board[2][0] == 1 and board[2][1] == 1 and board[2][2] == 1:
+        return 1
+    elif board[2][0] == 2 and board[2][1] == 2 and board[2][2] == 2:
+        return 2
+    else:
+        return 0
+
+
 def game():
-    # players_name()
+    players_name()
     board = create_board()
     print_board(board)
+    vertical_win(board)
 
 
 game()
