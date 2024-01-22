@@ -1,4 +1,6 @@
 # TIC TAC TOE GAME
+# Done by João Pedro Costa
+# 22/01/2024
 import random
 
 
